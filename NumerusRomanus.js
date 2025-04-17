@@ -1,13 +1,13 @@
 const NumerusRomanus = num =>
-    num < 1 ? '' :
+    (num < 1 ? '' :
     num >= 90 ? 'XC' + NumerusRomanus(num - 90) :
-    num >= 50 ? 'L' + NumerusRomanus(num - 50) :
+    num >= 50 ? 'L ' + NumerusRomanus(num - 50) :
     num >= 40 ? 'XL' + NumerusRomanus(num - 40) :
-    num >= 10 ? 'X' + NumerusRomanus(num - 10) :
-    num >= 9 ? 'IX' + NumerusRomanus(num - 9) :
-    num >= 5 ? 'V' + NumerusRomanus(num - 5) :
-    num >= 4 ? 'IV' + NumerusRomanus(num - 4) :
-    'I' + NumerusRomanus(num - 1);   
+    num >= 10 ? 'X ' + NumerusRomanus(num - 10) :
+    num >= 9 ? ' IX' + NumerusRomanus(num - 9) :
+    num >= 5 ? ' V ' + NumerusRomanus(num - 5) :
+    num >= 4 ? ' IV' + NumerusRomanus(num - 4) :
+    'I ' + NumerusRomanus(num - 1)).trim();
 
 console.log(NumerusRomanus(0)); // "" - just below lower bound (not valid in Roman numerals)
 console.log(NumerusRomanus(1)); // "I" - lower bound
