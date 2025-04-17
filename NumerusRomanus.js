@@ -1,32 +1,13 @@
-function NumerusRomanus(num) {
-  if (num < 1) {
-    return '';
-  }
-  if (num >= 90) {
-    return 'XC' + NumerusRomanus(num - 90);
-  }
-  if (num >= 50) {
-    return 'L' + NumerusRomanus(num - 50);
-  }
-  if (num >= 40) {
-    return 'XL' + NumerusRomanus(num - 40);
-  }
-  if (num >= 10) {
-    return 'X' + NumerusRomanus(num - 10);
-  }
-  if (num >= 9) {
-    return 'IX' + NumerusRomanus(num - 9);
-  }
-  if (num >= 5) {
-    return 'V' + NumerusRomanus(num - 5);
-  }
-  if (num >= 4) {
-    return 'IV' + NumerusRomanus(num - 4);
-  }
-  if (num >= 1) {
-    return 'I' + NumerusRomanus(num - 1);
-  }
-}
+const NumerusRomanus = num =>
+    num < 1 ? '' :
+    num >= 90 ? 'XC' + NumerusRomanus(num - 90) :
+    num >= 50 ? 'L' + NumerusRomanus(num - 50) :
+    num >= 40 ? 'XL' + NumerusRomanus(num - 40) :
+    num >= 10 ? 'X' + NumerusRomanus(num - 10) :
+    num >= 9 ? 'IX' + NumerusRomanus(num - 9) :
+    num >= 5 ? 'V' + NumerusRomanus(num - 5) :
+    num >= 4 ? 'IV' + NumerusRomanus(num - 4) :
+    'I' + NumerusRomanus(num - 1);   
 
 console.log(NumerusRomanus(0)); // "" - just below lower bound (not valid in Roman numerals)
 console.log(NumerusRomanus(1)); // "I" - lower bound
