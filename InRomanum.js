@@ -1,9 +1,9 @@
 // usque ad VIII
 const InRomanum = num =>
-    num <  1  ? '' :
-    num >= 5  ? 'V'  + InRomanum(num - 5) :
-    num >= 4  ? 'IV' + InRomanum(num - 4) :
-    'I' + InRomanum(num - 1);
+    num <  1  ? "" :
+    num >= 5  ? "V"  + InRomanum(num - 5) :
+    num >= 4  ? "IV" + InRomanum(num - 4) :
+    "I" + InRomanum(num - 1);
 
 console.log(InRomanum(0)); // "" - just below lower bound (not valid in Roman numerals)
 console.log(InRomanum(1)); // "I" - lower bound

@@ -19,7 +19,7 @@ TODO just skip markdown format
 
 // usque ad VIII
 const InRomanum = num =>
-    num <  1  ? '' :
-    num >= 5  ? 'V'  + InRomanum(num - 5) :
-    num >= 4  ? 'IV' + InRomanum(num - 4) :
-    'I' + InRomanum(num - 1);
+    num <  1  ? "" :
+    num >= 5  ? "V"  + InRomanum(num - 5) :
+    num >= 4  ? "IV" + InRomanum(num - 4) :
+    "I" + InRomanum(num - 1);
