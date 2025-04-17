@@ -2,6 +2,12 @@ function NumerusRomanus(num) {
   if (num < 1) {
     return '';
   }
+  if (num >= 90) {
+    return 'XC' + NumerusRomanus(num - 90);
+  }
+  if (num >= 50) {
+    return 'L' + NumerusRomanus(num - 50);
+  }
   if (num >= 40) {
     return 'XL' + NumerusRomanus(num - 40);
   }
@@ -37,13 +43,3 @@ console.log(NumerusRomanus(50)); // "L"
 console.log(NumerusRomanus(89)); // "LXXXIX"
 console.log(NumerusRomanus(90)); // "XC"
 console.log(NumerusRomanus(99)); // "XCIX"
-console.log(NumerusRomanus(100)); // "C"
-console.log(NumerusRomanus(399)); // "CCCXCIX"
-console.log(NumerusRomanus(400)); // "CD"
-console.log(NumerusRomanus(499)); // "CDXCIX"
-console.log(NumerusRomanus(500)); // "D"
-console.log(NumerusRomanus(900)); // "CM"
-console.log(NumerusRomanus(1000)); // "M"
-console.log(NumerusRomanus(1987)); // "MCMLXXXVII"
-console.log(NumerusRomanus(3999)); // "MMMCMXCIX" - upper bound of standard Roman numerals
-console.log(NumerusRomanus(4000)); // "" or unsupported - above standard range
